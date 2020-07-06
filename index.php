@@ -49,6 +49,17 @@ $user_name = 'Вадим Исаметов'; // укажите здесь ваш�
     </div>
 </header>
 
+<?php
+    function price_func($a) 
+    {
+        if ($a >= 1000) 
+        {
+            $a =  number_format($a, 0, '', ' ');
+        }
+        return $a.' '.'&#8381';
+     }               
+?>
+
 <main class="container">
     <section class="promo">
         <h2 class="promo__title">Нужен стафф для катки?</h2>
@@ -76,7 +87,7 @@ $user_name = 'Вадим Исаметов'; // укажите здесь ваш�
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost">цена<b class="rub">р</b></span>
+                            <span class="lot__cost"> <?=price_func(100000); ?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
